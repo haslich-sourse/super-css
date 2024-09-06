@@ -16,6 +16,8 @@
   list-style: none;
   padding: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 .header__link {
@@ -24,6 +26,7 @@
 }
 .header__link:hover {
   color: blue;
+  transition: color 0.3s ease-in-out;
 }
 
 .about {
@@ -63,6 +66,9 @@
   color: #1a1a1a;
 }
 .about__image-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 20px;
 }
@@ -81,6 +87,11 @@
   margin: 20px 0;
   border-left: 5px solid #333;
 }
+@media (max-width: 600px) {
+  .about__quote {
+    font-size: 1.2rem;
+  }
+}
 
 .footer {
   background-color: #333;
@@ -95,4 +106,7 @@
 }
 .footer__email:hover, .footer__phone:hover {
   text-decoration: underline;
+  transition: -webkit-text-decoration 0.3s ease-in-out;
+  transition: text-decoration 0.3s ease-in-out;
+  transition: text-decoration 0.3s ease-in-out, -webkit-text-decoration 0.3s ease-in-out;
 }/*# sourceMappingURL=about.css.map */

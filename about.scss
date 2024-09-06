@@ -4,6 +4,26 @@ $secondary-color: #f4f4f4;
 $highlight-color: #f9f871;
 $text-color: black;
 $padding: 20px;
+$transition-time: 0.3s;
+
+// Миксин для центрирования элементов по flex
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Миксин для адаптивности (мобильные устройства)
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+// Миксин для добавления transition
+@mixin transition($property, $duration: $transition-time, $ease: ease-in-out) {
+  transition: $property $duration $ease;
+}
 
 // Базовые стили для страницы
 .page-about {
@@ -17,7 +37,7 @@ $padding: 20px;
 .header {
   background-color: $secondary-color;
   padding: $padding;
-  
+
   &__title {
     margin: 0;
   }
@@ -25,7 +45,8 @@ $padding: 20px;
   &__menu {
     list-style: none;
     padding: 0;
-    display: flex;
+    @include flex-center; // Применение миксина для центрирования элементов
+
     gap: 10px;
   }
 
@@ -35,6 +56,7 @@ $padding: 20px;
 
     &:hover {
       color: blue;
+      @include transition(color); // Применение миксина для анимации перехода цвета
     }
   }
 }
@@ -88,6 +110,7 @@ $padding: 20px;
   }
 
   &__image-figure {
+    @include flex-center; // Применение миксина для центрирования изображения
     text-align: center;
     margin-top: $padding;
 
@@ -108,6 +131,9 @@ $padding: 20px;
     padding: $padding;
     margin: $padding 0;
     border-left: 5px solid $primary-color;
+    @include responsive(600px) {
+      font-size: 1.2rem; // Пример адаптивности с помощью миксина
+    }
   }
 }
 
@@ -126,6 +152,7 @@ $padding: 20px;
 
     &:hover {
       text-decoration: underline;
+      @include transition(text-decoration); // Переход для подчеркивания
     }
   }
 }
