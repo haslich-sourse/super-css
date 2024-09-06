@@ -1,0 +1,131 @@
+// Переменные
+$primary-color: #333;
+$secondary-color: #f4f4f4;
+$highlight-color: #f9f871;
+$text-color: black;
+$padding: 20px;
+
+// Базовые стили для страницы
+.page-about {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: $text-color;
+}
+
+// Шапка страницы
+.header {
+  background-color: $secondary-color;
+  padding: $padding;
+  
+  &__title {
+    margin: 0;
+  }
+
+  &__menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $text-color;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+// Основной контент
+.about {
+  padding: $padding;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: $padding;
+  }
+
+  &__skills {
+    &-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+
+      &-item {
+        padding: 5px 0;
+      }
+    }
+  }
+
+  &__timeline {
+    margin-top: $padding;
+
+    &-title {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    &-list {
+      list-style: none;
+      padding: 0;
+
+      &-item {
+        padding: 5px 0;
+        color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  &__image-figure {
+    text-align: center;
+    margin-top: $padding;
+
+    &-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &-caption {
+      font-size: 0.9rem;
+      color: gray;
+    }
+  }
+
+  &__quote {
+    font-style: italic;
+    background-color: lighten($secondary-color, 20%);
+    padding: $padding;
+    margin: $padding 0;
+    border-left: 5px solid $primary-color;
+  }
+}
+
+// Футер
+.footer {
+  background-color: $primary-color;
+  color: white;
+  padding: $padding;
+
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__email, &__phone {
+    color: $highlight-color;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
