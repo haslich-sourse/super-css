@@ -1,106 +1,106 @@
-/* Базовые стили для всей страницы */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-.page {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Переменные для базовых цветов и отступов */
+:root {
+    --primary-color: #333;
+    --secondary-color: #f4f4f4;
+    --highlight-color: #f9f871;
+    --text-color: black;
+    --padding: 20px;
 }
 
-/* Стили для шапки */
-.header {
-  background-color: #f4f4f4;
-  padding: 20px;
-  text-align: center;
+/* Базовые стили для всей страницы */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color); /* Используем переменную */
 }
-.header__title {
-  margin: 0;
+.page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--padding);
+}
+
+/* Flexbox для шапки */
+.header {
+    background-color: var(--secondary-color);
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение элементов */
+    align-items: center; /* Центрируем элементы по вертикали */
 }
 .header__menu {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
+    display: flex; /* Выстраиваем меню в одну строку */
+    gap: 10px; /* Атомарный CSS - расстояние между пунктами меню */
 }
 .header__menu-item {
-  display: inline;
-  margin-right: 10px;
+    margin-right: 10px;
 }
 .header__link {
-  text-decoration: none;
-  color: black;
+    text-decoration: none;
+    color: var(--text-color);
 }
 .header__link:hover {
-  text-decoration: underline; /* Псевдокласс :hover */
-  color: blue;
+    text-decoration: underline;
+    color: blue;
 }
 
 /* Стили для основного контента */
 .content__section {
-  padding: 20px;
-  margin: 20px 0;
+    padding: var(--padding);
+    margin: 20px 0;
 }
 .content__section--about {
-  background-color: #e7f3fe;
+    background-color: #e7f3fe;
 }
 .content__section--projects {
-  background-color: #fefae0;
+    background-color: #fefae0;
+    display: flex; /* Flexbox для проектов */
+    flex-direction: column;
+    align-items: center; /* Центрируем элементы внутри */
 }
 .content__title {
-  font-size: 24px;
-  margin-bottom: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center; /* Атомарный CSS - центрирование текста */
 }
 
-/* Псевдокласс :nth-child */
-.content__list-item:nth-child(odd) {
-  background-color: #f0f0f0;
-}
-
-/* Стили для цитат и изображений */
-.quote {
-  font-style: italic;
-  background-color: #f9f9f9;
-  border-left: 5px solid #ccc;
-  padding: 10px;
-  margin: 20px 0;
-}
+/* Flexbox для изображений */
 .image-container {
-  text-align: center;
-  margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 .image-container img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-/* Стили для футера */
+/* Стили для футера с flex */
 .footer {
-  background-color: #333;
-  color: white;
-  padding: 20px;
-  text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column; /* Выравниваем содержимое по вертикали */
+    text-align: center;
 }
-.footer__email,
-.footer__phone {
-  color: #f9f871;
-  text-decoration: none;
+.footer__email, .footer__phone {
+    color: var(--highlight-color);
+    text-decoration: none;
+}
+.footer__email:hover, .footer__phone:hover {
+    text-decoration: underline;
 }
 
-/* Псевдокласс :hover для ссылок */
-.footer__email:hover,
-.footer__phone:hover {
-  text-decoration: underline;
-}
-
-/* Псевдоэлемент ::before и ::after */
+/* Псевдоэлементы */
 .content__title::before {
-  content: "🔥 "; /* Добавляем огонек перед заголовком */
+    content: "🔥 "; /* Добавляем огонек перед заголовком */
 }
 .footer__contact::after {
-  content: " 📞"; /* Добавляем телефонный символ после контактов */
-}
-
-/* Псевдокласс :focus для ссылки */
-.footer__email:focus {
-  outline: 2px solid blue; /* Фокусная рамка для email */
+    content: " 📞"; /* Добавляем телефонный символ после контактов */
 }
