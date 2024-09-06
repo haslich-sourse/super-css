@@ -1,0 +1,106 @@
+/* Базовые стили для всей страницы */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Стили для шапки */
+.header {
+  background-color: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+.header__title {
+  margin: 0;
+}
+.header__menu {
+  list-style: none;
+  padding: 0;
+}
+.header__menu-item {
+  display: inline;
+  margin-right: 10px;
+}
+.header__link {
+  text-decoration: none;
+  color: black;
+}
+.header__link:hover {
+  text-decoration: underline; /* Псевдокласс :hover */
+  color: blue;
+}
+
+/* Стили для основного контента */
+.content__section {
+  padding: 20px;
+  margin: 20px 0;
+}
+.content__section--about {
+  background-color: #e7f3fe;
+}
+.content__section--projects {
+  background-color: #fefae0;
+}
+.content__title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Псевдокласс :nth-child */
+.content__list-item:nth-child(odd) {
+  background-color: #f0f0f0;
+}
+
+/* Стили для цитат и изображений */
+.quote {
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-left: 5px solid #ccc;
+  padding: 10px;
+  margin: 20px 0;
+}
+.image-container {
+  text-align: center;
+  margin: 20px 0;
+}
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Стили для футера */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.footer__email,
+.footer__phone {
+  color: #f9f871;
+  text-decoration: none;
+}
+
+/* Псевдокласс :hover для ссылок */
+.footer__email:hover,
+.footer__phone:hover {
+  text-decoration: underline;
+}
+
+/* Псевдоэлемент ::before и ::after */
+.content__title::before {
+  content: "🔥 "; /* Добавляем огонек перед заголовком */
+}
+.footer__contact::after {
+  content: " 📞"; /* Добавляем телефонный символ после контактов */
+}
+
+/* Псевдокласс :focus для ссылки */
+.footer__email:focus {
+  outline: 2px solid blue; /* Фокусная рамка для email */
+}

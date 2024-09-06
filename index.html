@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Игорь - Разработчик</title>
+    <!-- Подключаем CSS файл -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="page">
+    <!-- Шапка страницы -->
+    <header class="header">
+      <div class="header__logo">
+        <h1 class="header__title">Игорь - Разработчик</h1>
+      </div>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__menu-item">
+            <a href="#about" class="header__link">О Игоре</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#projects" class="header__link">Проекты</a>
+          </li>
+          <li class="header__menu-item">
+            <a href="#contacts" class="header__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="content">
+      <!-- Секция о разработчике -->
+      <section id="about" class="content__section content__section--about">
+        <h2 class="content__title">О Игоре</h2>
+        <p class="content__text">
+          Игорь — опытный разработчик, специализирующийся на веб-разработке. Его
+          знания включают современные технологии, и он умеет эффективно решать
+          задачи.
+        </p>
+
+        <!-- Цитата -->
+        <blockquote class="quote">
+          «Хороший код пишется не тогда, когда нечего добавить, а тогда, когда
+          нечего убрать.»
+        </blockquote>
+      </section>
+
+      <!-- Секция проектов -->
+      <section
+        id="projects"
+        class="content__section content__section--projects"
+      >
+        <h2 class="content__title">Проекты</h2>
+        <ul class="content__list">
+          <li class="content__list-item">
+            Проект 1 - Сайт для бизнеса &#10003;
+          </li>
+          <li class="content__list-item">
+            Проект 2 - Интернет-магазин &#128722;
+          </li>
+          <li class="content__list-item">
+            Проект 3 - Портфолио фотографа &#128248;
+          </li>
+        </ul>
+
+        <!-- Изображение проекта -->
+        <div class="image-container">
+          <img src="https://via.placeholder.com/600x400" alt="Пример проекта" />
+        </div>
+      </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+      <section id="contacts" class="footer__section footer__section--contacts">
+        <h3 class="footer__title">Контакты</h3>
+        <address class="footer__contact">
+          Электронная почта:
+          <a href="mailto:igor@example.com" class="footer__email"
+            >igor@example.com</a
+          ><br />
+          Телефон:
+          <a href="tel:+123456789" class="footer__phone">+1 (234) 567-89</a>
+        </address>
+      </section>
+    </footer>
+  </body>
+</html>
